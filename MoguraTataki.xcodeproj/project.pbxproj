@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8E7FE10248A57FB00FC5975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */; };
+		D8E7FE12248A57FB00FC5975 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */; };
+		D8E7FE14248A57FB00FC5975 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE13248A57FB00FC5975 /* ViewController.swift */; };
+		D8E7FE17248A57FB00FC5975 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E7FE15248A57FB00FC5975 /* Main.storyboard */; };
+		D8E7FE1A248A57FB00FC5975 /* MoguraTataki.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE18248A57FB00FC5975 /* MoguraTataki.xcdatamodeld */; };
+		D8E7FE1C248A57FB00FC5975 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8E7FE1B248A57FB00FC5975 /* Assets.xcassets */; };
+		D8E7FE1F248A57FB00FC5975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E7FE1D248A57FB00FC5975 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D8E7FE0C248A57FB00FC5975 /* MoguraTataki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoguraTataki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D8E7FE13248A57FB00FC5975 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8E7FE16248A57FB00FC5975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8E7FE19248A57FB00FC5975 /* MoguraTataki.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoguraTataki.xcdatamodel; sourceTree = "<group>"; };
+		D8E7FE1B248A57FB00FC5975 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8E7FE1E248A57FB00FC5975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8E7FE20248A57FB00FC5975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8E7FE09248A57FB00FC5975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8E7FE03248A57FB00FC5975 = {
+			isa = PBXGroup;
+			children = (
+				D8E7FE0E248A57FB00FC5975 /* MoguraTataki */,
+				D8E7FE0D248A57FB00FC5975 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8E7FE0D248A57FB00FC5975 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7FE0C248A57FB00FC5975 /* MoguraTataki.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8E7FE0E248A57FB00FC5975 /* MoguraTataki */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */,
+				D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */,
+				D8E7FE13248A57FB00FC5975 /* ViewController.swift */,
+				D8E7FE15248A57FB00FC5975 /* Main.storyboard */,
+				D8E7FE1B248A57FB00FC5975 /* Assets.xcassets */,
+				D8E7FE1D248A57FB00FC5975 /* LaunchScreen.storyboard */,
+				D8E7FE20248A57FB00FC5975 /* Info.plist */,
+				D8E7FE18248A57FB00FC5975 /* MoguraTataki.xcdatamodeld */,
+			);
+			path = MoguraTataki;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8E7FE0B248A57FB00FC5975 /* MoguraTataki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8E7FE23248A57FB00FC5975 /* Build configuration list for PBXNativeTarget "MoguraTataki" */;
+			buildPhases = (
+				D8E7FE08248A57FB00FC5975 /* Sources */,
+				D8E7FE09248A57FB00FC5975 /* Frameworks */,
+				D8E7FE0A248A57FB00FC5975 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoguraTataki;
+			productName = MoguraTataki;
+			productReference = D8E7FE0C248A57FB00FC5975 /* MoguraTataki.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8E7FE04248A57FB00FC5975 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = app.com.Takaharu.Imaizumi;
+				TargetAttributes = {
+					D8E7FE0B248A57FB00FC5975 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = D8E7FE07248A57FB00FC5975 /* Build configuration list for PBXProject "MoguraTataki" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8E7FE03248A57FB00FC5975;
+			productRefGroup = D8E7FE0D248A57FB00FC5975 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8E7FE0B248A57FB00FC5975 /* MoguraTataki */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8E7FE0A248A57FB00FC5975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E7FE1F248A57FB00FC5975 /* LaunchScreen.storyboard in Resources */,
+				D8E7FE1C248A57FB00FC5975 /* Assets.xcassets in Resources */,
+				D8E7FE17248A57FB00FC5975 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8E7FE08248A57FB00FC5975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E7FE14248A57FB00FC5975 /* ViewController.swift in Sources */,
+				D8E7FE10248A57FB00FC5975 /* AppDelegate.swift in Sources */,
+				D8E7FE1A248A57FB00FC5975 /* MoguraTataki.xcdatamodeld in Sources */,
+				D8E7FE12248A57FB00FC5975 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8E7FE15248A57FB00FC5975 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E7FE16248A57FB00FC5975 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8E7FE1D248A57FB00FC5975 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E7FE1E248A57FB00FC5975 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8E7FE21248A57FB00FC5975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8E7FE22248A57FB00FC5975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8E7FE24248A57FB00FC5975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoguraTataki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.com.Takaharu.Imaizumi.MoguraTataki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8E7FE25248A57FB00FC5975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoguraTataki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.com.Takaharu.Imaizumi.MoguraTataki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8E7FE07248A57FB00FC5975 /* Build configuration list for PBXProject "MoguraTataki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E7FE21248A57FB00FC5975 /* Debug */,
+				D8E7FE22248A57FB00FC5975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E7FE23248A57FB00FC5975 /* Build configuration list for PBXNativeTarget "MoguraTataki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E7FE24248A57FB00FC5975 /* Debug */,
+				D8E7FE25248A57FB00FC5975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8E7FE18248A57FB00FC5975 /* MoguraTataki.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8E7FE19248A57FB00FC5975 /* MoguraTataki.xcdatamodel */,
+			);
+			currentVersion = D8E7FE19248A57FB00FC5975 /* MoguraTataki.xcdatamodel */;
+			path = MoguraTataki.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D8E7FE04248A57FB00FC5975 /* Project object */;
+}

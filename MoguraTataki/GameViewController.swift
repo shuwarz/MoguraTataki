@@ -11,6 +11,8 @@ import UIKit
 class GameViewController: UIViewController {
     var number: Int = 0
     
+    @IBOutlet var button: UIButton!
+    
     @IBOutlet var label: UILabel!
     var count: Float = 0
     
@@ -18,30 +20,44 @@ class GameViewController: UIViewController {
     
     var pointLabel = UILabel()
     
-    var colorArray = [UIColor.magenta, UIColor.blue, UIColor.cyan, UIColor.black, UIColor.brown, UIColor.orange, UIColor.purple, UIColor.red]
+    var colorArray = [UIColor.magenta, UIColor.blue, UIColor.cyan, UIColor.black, UIColor.brown, UIColor.orange, UIColor.purple, UIColor.red] //出てくる色
     
-    var fontArray = ["Zapfino", "HiraginoKakuGothic", "Menlo", "Futura", "LaoSangamMN", "GillSans", "Didot"]
+    var fontArray = ["Zapfino", "HiraginoKakuGothic", "Menlo", "Futura", "LaoSangamMN", "GillSans", "Didot"] //出てくるフォント
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UIScreen.main.bounds.size.width)
-        print(UIScreen.main.bounds.size.height)
 
         // Do any additional setup after loading the view.
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+
         labellabellabel()
         count = 60
         
+       
         if !timer.isValid {
             //タイマーが動作していなかったら動かす
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
-        }
+           
+            }
         
+        //『結果へ』ボタンを非表示にする
+            button.isHidden = true
     }
     
     @objc func up() {
         //countを1引く
         count = count - 1
-        print("ビスコのじかん")
+        
+        //countが0になったとき止まる
+        if count <= 0 {
+            print("タイマーが0になりました")
+            //『結果へ』ボタンを表示する
+            button.isHidden = false
+        }
+       
+        print("ビスコのじかん") //ﾌﾊﾊﾊﾊﾊ ｺﾉ ﾌﾟﾛｼﾞｪｸﾄ ﾊ ﾜﾚ ｶﾞ ﾉｯﾄｯﾀ!! ｼﾝﾘｬｸｼｬ ｳﾁｭｳｼﾞﾝ　sakurako ﾖﾘ
         print(count)
     
         label.text = String(count)
@@ -49,7 +65,7 @@ class GameViewController: UIViewController {
     
     @IBAction func tapActionUe1Hidari(_ sender: Any) {
         number += 2
-        pointLabel.text = String(number)
+        pointLabel.text = String(number) //点数の合計を表示させる
         BashoTolabelToFont()
     }
 
@@ -127,9 +143,9 @@ class GameViewController: UIViewController {
         pointLabel.text = "0000" // テキストの設定
         pointLabel.textColor = UIColor.clear // テキストカラーの設定
         pointLabel.font = UIFont(name: "Zapfino", size: 56) // フォントの設定
-        pointLabel.adjustsFontSizeToFitWidth = true
+        pointLabel.adjustsFontSizeToFitWidth = true //　枠にきっちりと入るようにします
         self.view.addSubview(pointLabel) // ラベルの追加
-        self.view.bringSubviewToFront(pointLabel)
+        self.view.bringSubviewToFront(pointLabel) //　最前面にラベルを持ってくる
     }
     
     func BashoTolabelToFont() {
@@ -137,14 +153,12 @@ class GameViewController: UIViewController {
         let y = Int.random(in: 1...400)
         let width = Int.random(in: 10...414)
         let height = Int.random(in: 10...896)
-        pointLabel.frame = CGRect(x: x, y: y, width: width, height: height)
-        pointLabel.textColor = colorArray.randomElement()
+        pointLabel.frame = CGRect(x: x, y: y, width: width, height: height) //ここに表示します
+        pointLabel.textColor = colorArray.randomElement() //ColorArrayからランダムに選びます
         pointLabel.font = UIFont(name: fontArray.randomElement()!, size: 56)
+        //fontArrayからフォントをランダムに選び、サイズは56で統一にします
         pointLabel.adjustsFontSizeToFitWidth = true
-        print(x)
-        print(y)
-        print(width)
-        print(height)
+        
     }
 
 

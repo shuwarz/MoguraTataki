@@ -18,6 +18,13 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func Modoru () {
+        self.navigationController?.popToRootViewController(animated: true)
+        //結果画面からトップ画面にもどる』
+    }
+        
+    
+    
 
     /*
     // MARK: - Navigation

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D871DFEE24A4AF780017F788 /* 鰹.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D871DFED24A4AF780017F788 /* 鰹.jpg */; };
+		D8CDB98B24B186E3009B230F /* 結果発表.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D8CDB98A24B186E3009B230F /* 結果発表.jpeg */; };
 		D8E7FE10248A57FB00FC5975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */; };
 		D8E7FE12248A57FB00FC5975 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */; };
 		D8E7FE14248A57FB00FC5975 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE13248A57FB00FC5975 /* TopViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		D871DFED24A4AF780017F788 /* 鰹.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鰹.jpg"; sourceTree = "<group>"; };
+		D8CDB98A24B186E3009B230F /* 結果発表.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "結果発表.jpeg"; sourceTree = SOURCE_ROOT; };
 		D8E7FE0C248A57FB00FC5975 /* MoguraTataki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoguraTataki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D871DFED24A4AF780017F788 /* 鰹.jpg */,
+				D8CDB98A24B186E3009B230F /* 結果発表.jpeg */,
 				D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */,
 				D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */,
 				D8E7FE13248A57FB00FC5975 /* TopViewController.swift */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E7FE1F248A57FB00FC5975 /* LaunchScreen.storyboard in Resources */,
+				D8CDB98B24B186E3009B230F /* 結果発表.jpeg in Resources */,
 				D871DFEE24A4AF780017F788 /* 鰹.jpg in Resources */,
 				D8E7FE1C248A57FB00FC5975 /* Assets.xcassets in Resources */,
 				D8E7FE17248A57FB00FC5975 /* Main.storyboard in Resources */,

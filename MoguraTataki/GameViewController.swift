@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     
     var timer: Timer = Timer()
     
-    var pointLabel = UILabel()
+    @IBOutlet var pointLabel: UILabel!
     
     var colorArray = [UIColor.magenta, UIColor.blue, UIColor.cyan, UIColor.black, UIColor.brown, UIColor.orange, UIColor.purple, UIColor.red] //出てくる色
     
@@ -32,9 +32,7 @@ class GameViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
 
-        labellabellabel()
         count = 60
-        
        
         if !timer.isValid {
             //タイマーが動作していなかったら動かす
@@ -53,11 +51,13 @@ class GameViewController: UIViewController {
         //countが0になったとき止まる
         if count <= 0 {
             print("タイマーが0になりました")
+            
+            timer.invalidate()
             //『結果へ』ボタンを表示する
             button.isHidden = false
         }
        
-        print("ビスコのじかん") //ﾌﾊﾊﾊﾊﾊ ｺﾉ ﾌﾟﾛｼﾞｪｸﾄ ﾊ ﾜﾚ ｶﾞ ﾉｯﾄｯﾀ!! ｼﾝﾘｬｸｼｬ ｳﾁｭｳｼﾞﾝ　sakurako ﾖﾘ
+        print("ビスコのじかん") //ﾌﾊﾊﾊﾊﾊ ｺﾉ ﾌﾟﾛｼﾞｪｸﾄ ﾊ ﾜﾚ ｶﾞ ﾉｯﾄｯﾀ!! ｼﾝﾘｬｸｼｬ ｳﾁｭｳｼﾞﾝ　 ﾖﾘ
         print(count)
     
         label.text = String(count)
@@ -133,31 +133,14 @@ class GameViewController: UIViewController {
         number += 2
         pointLabel.text = String(number)
         BashoTolabelToFont()
-    }
-    
-    
-    func labellabellabel() {
-        // UILabelの設定
-        pointLabel.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height) // 位置とサイズの指定
-        pointLabel.textAlignment = NSTextAlignment.center // 横揃えの設定
-        pointLabel.text = "0000" // テキストの設定
-        pointLabel.textColor = UIColor.clear // テキストカラーの設定
-        pointLabel.font = UIFont(name: "Zapfino", size: 56) // フォントの設定
-        pointLabel.adjustsFontSizeToFitWidth = true //　枠にきっちりと入るようにします
-        self.view.addSubview(pointLabel) // ラベルの追加
-        self.view.bringSubviewToFront(pointLabel) //　最前面にラベルを持ってくる
+       
     }
     
     func BashoTolabelToFont() {
-        let x = Int.random(in: 1...200)
-        let y = Int.random(in: 1...400)
-        let width = Int.random(in: 10...414)
-        let height = Int.random(in: 10...896)
-        pointLabel.frame = CGRect(x: x, y: y, width: width, height: height) //ここに表示します
         pointLabel.textColor = colorArray.randomElement() //ColorArrayからランダムに選びます
-        pointLabel.font = UIFont(name: fontArray.randomElement()!, size: 56)
-        //fontArrayからフォントをランダムに選び、サイズは56で統一にします
-        pointLabel.adjustsFontSizeToFitWidth = true
+       // pointLabel.font = UIFont(name: fontArray.randomElement()!, size: 56)
+      //fontArrayからサイズは56で統一にします
+        //pointLabel.adjustsFontSizeToFitWidth = true
         
     }
 

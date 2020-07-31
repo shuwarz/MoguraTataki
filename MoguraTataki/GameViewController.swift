@@ -11,6 +11,11 @@ import UIKit
 class GameViewController: UIViewController {
     var number: Int = 0
     
+    //乱数を入れるためのIntの変数を用意
+    var ransu: Int!
+    
+    @IBOutlet var moguralabel: UILabel!
+    
     @IBOutlet var button: UIButton!
     
     @IBOutlet var label: UILabel!
@@ -23,7 +28,6 @@ class GameViewController: UIViewController {
     var colorArray = [UIColor.magenta, UIColor.blue, UIColor.cyan, UIColor.black, UIColor.brown, UIColor.orange, UIColor.purple, UIColor.red] //出てくる色
     
     var fontArray = ["Zapfino", "HiraginoKakuGothic", "Menlo", "Futura", "LaoSangamMN", "GillSans", "Didot"] //出てくるフォント
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -143,8 +147,70 @@ class GameViewController: UIViewController {
         //pointLabel.adjustsFontSizeToFitWidth = true
         
     }
-
-
+    
+    @IBAction func start() {
+        
+        
+    }
+    
+    @IBAction func stop() {
+        
+        
+    }
+    
+    ransu: Int!
+    //乱数を入れるためのInt型の変数を用意
+    
+    if ransu == Ue1Hidari {
+        //Ue1Hidariが表示（他は非表示）
+    }
+    else if ransu == Ue1Naka {
+        //Ue1Nakaが表示（他は非表示）
+    }
+    
+    else if ransu == Ue1Migi {
+        //Ue1Migiが表示（他は非表示）
+    }
+    
+    else if ransu == Ue2Hidari {
+        //Ue2Hidariが表示（他は非表示）
+    }
+    
+    else if ransu == Ue2Naka {
+        //Ue2Nakaが表示（他は非表示）
+    }
+    
+    else if ransu == Ue2Migi {
+        //Ue2Migiが表示（他は非表示）
+    }
+    
+    else if ransu == Ue3Hidari {
+        //Ue3Hidariが表示（他は非表示）
+    }
+    
+    else if ransu == Ue3Naka {
+        //Ue3Nakaが表示（他は非表示）
+    }
+    
+    else if ransu == Ue3Migi {
+        //Ue3Migiが表示（他は非表示）
+    }
+    
+    else if ransu == Ue4Hidari {
+        //Ue4Hidariが表示（他は非表示）
+    }
+    
+    else if ransu == Ue4Naka {
+        //Ue4NAkaが表示（他は非表示）
+    }
+    
+    else if ransu == Ue4Migi {
+        //Ue4Migiが表示（他は非表示）
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

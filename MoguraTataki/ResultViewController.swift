@@ -12,9 +12,17 @@ class ResultViewController: UIViewController {
 
     @IBOutlet var label: UILabel!
     
+     //①引数
+    var saishusukoa = 0
+    
+    @IBOutlet weak var kekkalabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //②引数をラベルにセット
+        kekkalabel.text = String(saishusukoa)
+        
         // Do any additional setup after loading the view.
     }
     

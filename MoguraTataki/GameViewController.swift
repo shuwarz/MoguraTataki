@@ -47,6 +47,55 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Ue1HidariButton.imageView?.contentMode = .scaleAspectFit
+        Ue1HidariButton.contentHorizontalAlignment = .fill
+        Ue1HidariButton.contentVerticalAlignment = .fill
+        
+        Ue1NakaButton.imageView?.contentMode = .scaleAspectFit
+        Ue1NakaButton.contentHorizontalAlignment = .fill
+        Ue1NakaButton.contentVerticalAlignment = .fill
+        
+        Ue1MigiButton.imageView?.contentMode = .scaleAspectFit
+        Ue1MigiButton.contentHorizontalAlignment = .fill
+        Ue1MigiButton.contentVerticalAlignment = .fill
+        
+        Ue2HidariButton.imageView?.contentMode = .scaleAspectFit
+        Ue2HidariButton.contentHorizontalAlignment = .fill
+        Ue2HidariButton.contentVerticalAlignment = .fill
+        
+        Ue2NakaButton.imageView?.contentMode = .scaleAspectFit
+        Ue2NakaButton.contentHorizontalAlignment = .fill
+        Ue2NakaButton.contentVerticalAlignment = .fill
+        
+        Ue2MigiButton.imageView?.contentMode = .scaleAspectFit
+        Ue2MigiButton.contentHorizontalAlignment = .fill
+        Ue2MigiButton.contentVerticalAlignment = .fill
+        
+        Ue3HidariButton.imageView?.contentMode = .scaleAspectFit
+        Ue3HidariButton.contentHorizontalAlignment = .fill
+        Ue3HidariButton.contentVerticalAlignment = .fill
+        
+        Ue3NakaButton.imageView?.contentMode = .scaleAspectFit
+        Ue3NakaButton.contentHorizontalAlignment = .fill
+        Ue3NakaButton.contentVerticalAlignment = .fill
+        
+        Ue3MigiButton.imageView?.contentMode = .scaleAspectFit
+        Ue3MigiButton.contentHorizontalAlignment = .fill
+        Ue3MigiButton.contentVerticalAlignment = .fill
+        
+        Ue4HidariButton.imageView?.contentMode = .scaleAspectFit
+        Ue4HidariButton.contentHorizontalAlignment = .fill
+        Ue4HidariButton.contentVerticalAlignment = .fill
+        
+        Ue4NakaButton.imageView?.contentMode = .scaleAspectFit
+        Ue4NakaButton.contentHorizontalAlignment = .fill
+        Ue4NakaButton.contentVerticalAlignment = .fill
+        
+        Ue4MigiButton.imageView?.contentMode = .scaleAspectFit
+        Ue4MigiButton.contentHorizontalAlignment = .fill
+        Ue4MigiButton.contentVerticalAlignment = .fill
+        
+        
     
         navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -80,78 +129,91 @@ class GameViewController: UIViewController {
         buttonHyouji()
         
         label.text = String(count)
+        
     }
     
     @IBAction func tapActionUe1Hidari(_ sender: Any) {
         number += 2
         pointLabel.text = String(number) //点数の合計を表示させる
         BashoTolabelToFont()
-    }
-    
+        Ue1HidariButton.isHidden = true
+       }
+       
     @IBAction func tapActionUe1Naka(_ sender: Any) {
         number += 1
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue1NakaButton.isHidden = true
     }
     
     @IBAction func tapActionUe1Migi(_ sender: Any) {
         number += 1
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue1MigiButton.isHidden = true
     }
     
     @IBAction func tapActionUe2Hidari(_ sender: Any) {
         number -= 3
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue2HidariButton.isHidden = true
     }
     
     @IBAction func tapActionUe2Naka(_ sender: Any) {
         number -= 3
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue2NakaButton.isHidden = true
     }
     
     @IBAction func tapActionUe2Migi(_ sender: Any) {
         number += 1
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue2MigiButton.isHidden = true
     }
     
     @IBAction func tapActionUe3Hidari(_ sender: Any) {
         number += 2
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue3HidariButton.isHidden = true
     }
     
     @IBAction func tapActionUe3Naka(_ sender: Any) {
         number -= 3
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue3NakaButton.isHidden = true
     }
     
     @IBAction func tapActionUe3Migi(_ sender: Any) {
         number += 2
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue3MigiButton.isHidden = true
     }
     
     @IBAction func tapActionUe4Hidari(_ sender: Any) {
         number += 1
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue4HidariButton.isHidden = true
     }
     
     @IBAction func tapActionUe4Naka(_ sender: Any) {
         number -= 3
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue4NakaButton.isHidden = true
     }
     
     @IBAction func tapActionUe4migi(_ sender: Any) {
         number += 2
         pointLabel.text = String(number)
         BashoTolabelToFont()
+        Ue4MigiButton.isHidden = true
         
     }
     

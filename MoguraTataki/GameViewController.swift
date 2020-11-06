@@ -99,7 +99,7 @@ class GameViewController: UIViewController {
     
         navigationController?.setNavigationBarHidden(true, animated: false)
         
-        count = 60
+        count = 30
         
         if !timer.isValid {
             //タイマーが動作していなかったら動かす

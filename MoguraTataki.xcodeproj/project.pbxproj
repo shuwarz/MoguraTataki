@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8AB129E250B741100866BDB /* カツオ　背景.png in Resources */ = {isa = PBXBuildFile; fileRef = D8AB129D250B741000866BDB /* カツオ　背景.png */; };
-		D8AB12A0250B744300866BDB /* カツオ１.png in Resources */ = {isa = PBXBuildFile; fileRef = D8AB129F250B744300866BDB /* カツオ１.png */; };
-		D8AB12A2250B744B00866BDB /* カツオ２.png in Resources */ = {isa = PBXBuildFile; fileRef = D8AB12A1250B744B00866BDB /* カツオ２.png */; };
-		D8AB12A4250B745300866BDB /* カツオ３.png in Resources */ = {isa = PBXBuildFile; fileRef = D8AB12A3250B745300866BDB /* カツオ３.png */; };
-		D8AB12A6250B745B00866BDB /* カツオ４.png in Resources */ = {isa = PBXBuildFile; fileRef = D8AB12A5250B745B00866BDB /* カツオ４.png */; };
+		D84EDF68255E941F0055FB38 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84EDF67255E941F0055FB38 /* NewGameViewController.swift */; };
+		D8994C58257A340F00308243 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8994C57257A340F00308243 /* ModalViewController.swift */; };
 		D8E7FE10248A57FB00FC5975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */; };
 		D8E7FE12248A57FB00FC5975 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */; };
 		D8E7FE14248A57FB00FC5975 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FE13248A57FB00FC5975 /* TopViewController.swift */; };
@@ -24,11 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D8AB129D250B741000866BDB /* カツオ　背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "カツオ　背景.png"; sourceTree = SOURCE_ROOT; };
-		D8AB129F250B744300866BDB /* カツオ１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "カツオ１.png"; sourceTree = SOURCE_ROOT; };
-		D8AB12A1250B744B00866BDB /* カツオ２.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "カツオ２.png"; sourceTree = SOURCE_ROOT; };
-		D8AB12A3250B745300866BDB /* カツオ３.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "カツオ３.png"; sourceTree = SOURCE_ROOT; };
-		D8AB12A5250B745B00866BDB /* カツオ４.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "カツオ４.png"; sourceTree = SOURCE_ROOT; };
+		D84EDF67255E941F0055FB38 /* NewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		D8994C57257A340F00308243 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		D8E7FE0C248A57FB00FC5975 /* MoguraTataki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoguraTataki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,11 +66,6 @@
 		D8E7FE0E248A57FB00FC5975 /* MoguraTataki */ = {
 			isa = PBXGroup;
 			children = (
-				D8AB12A5250B745B00866BDB /* カツオ４.png */,
-				D8AB12A3250B745300866BDB /* カツオ３.png */,
-				D8AB12A1250B744B00866BDB /* カツオ２.png */,
-				D8AB129F250B744300866BDB /* カツオ１.png */,
-				D8AB129D250B741000866BDB /* カツオ　背景.png */,
 				D8E7FE0F248A57FB00FC5975 /* AppDelegate.swift */,
 				D8E7FE11248A57FB00FC5975 /* SceneDelegate.swift */,
 				D8E7FE13248A57FB00FC5975 /* TopViewController.swift */,
@@ -87,6 +76,8 @@
 				D8E7FE1D248A57FB00FC5975 /* LaunchScreen.storyboard */,
 				D8E7FE20248A57FB00FC5975 /* Info.plist */,
 				D8E7FE18248A57FB00FC5975 /* MoguraTataki.xcdatamodeld */,
+				D84EDF67255E941F0055FB38 /* NewGameViewController.swift */,
+				D8994C57257A340F00308243 /* ModalViewController.swift */,
 			);
 			path = MoguraTataki;
 			sourceTree = "<group>";
@@ -149,12 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8AB12A6250B745B00866BDB /* カツオ４.png in Resources */,
 				D8E7FE1F248A57FB00FC5975 /* LaunchScreen.storyboard in Resources */,
-				D8AB12A0250B744300866BDB /* カツオ１.png in Resources */,
-				D8AB12A4250B745300866BDB /* カツオ３.png in Resources */,
-				D8AB12A2250B744B00866BDB /* カツオ２.png in Resources */,
-				D8AB129E250B741100866BDB /* カツオ　背景.png in Resources */,
 				D8E7FE1C248A57FB00FC5975 /* Assets.xcassets in Resources */,
 				D8E7FE17248A57FB00FC5975 /* Main.storyboard in Resources */,
 			);
@@ -167,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8994C58257A340F00308243 /* ModalViewController.swift in Sources */,
 				D8EB5DC0249CD015000F89E7 /* GameViewController.swift in Sources */,
 				D8E7FE14248A57FB00FC5975 /* TopViewController.swift in Sources */,
+				D84EDF68255E941F0055FB38 /* NewGameViewController.swift in Sources */,
 				D8E7FE10248A57FB00FC5975 /* AppDelegate.swift in Sources */,
 				D8E7FE1A248A57FB00FC5975 /* MoguraTataki.xcdatamodeld in Sources */,
 				D8E7FE12248A57FB00FC5975 /* SceneDelegate.swift in Sources */,

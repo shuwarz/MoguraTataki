@@ -9,446 +9,61 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    // 得点
-    var number: Int = 0
     
-    //乱数を入れるためのIntの変数を用意
-    var ransu: Int = 0
-    
-    @IBOutlet var moguralabel: UILabel!
-    
-    @IBOutlet var button: UIButton!
-    
-    @IBOutlet var label: UILabel!
-    
-    @IBOutlet var Ue1HidariButton: UIButton!
-    @IBOutlet var Ue1NakaButton: UIButton!
-    @IBOutlet var Ue1MigiButton: UIButton!
-    @IBOutlet var Ue2HidariButton: UIButton!
-    @IBOutlet var Ue2NakaButton: UIButton!
-    @IBOutlet var Ue2MigiButton: UIButton!
-    @IBOutlet var Ue3HidariButton: UIButton!
-    @IBOutlet var Ue3NakaButton: UIButton!
-    @IBOutlet var Ue3MigiButton: UIButton!
-    @IBOutlet var Ue4HidariButton: UIButton!
-    @IBOutlet var Ue4NakaButton: UIButton!
-    @IBOutlet var Ue4MigiButton: UIButton!
-    
-    var count: Float = 0
-    
-    var timer: Timer = Timer()
-    
-    @IBOutlet var pointLabel: UILabel!
-    
-    var colorArray = [UIColor.magenta, UIColor.blue, UIColor.cyan, UIColor.black, UIColor.brown, UIColor.orange, UIColor.purple, UIColor.red] //出てくる色
-    
-    var fontArray = ["Zapfino", "HiraginoKakuGothic", "Menlo", "Futura", "LaoSangamMN", "GillSans", "Didot"] //出てくるフォント
+    var generateImageTimer = Timer()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
-        Ue1HidariButton.imageView?.contentMode = .scaleAspectFit
-        Ue1HidariButton.contentHorizontalAlignment = .fill
-        Ue1HidariButton.contentVerticalAlignment = .fill
-        
-        Ue1NakaButton.imageView?.contentMode = .scaleAspectFit
-        Ue1NakaButton.contentHorizontalAlignment = .fill
-        Ue1NakaButton.contentVerticalAlignment = .fill
-        
-        Ue1MigiButton.imageView?.contentMode = .scaleAspectFit
-        Ue1MigiButton.contentHorizontalAlignment = .fill
-        Ue1MigiButton.contentVerticalAlignment = .fill
-        
-        Ue2HidariButton.imageView?.contentMode = .scaleAspectFit
-        Ue2HidariButton.contentHorizontalAlignment = .fill
-        Ue2HidariButton.contentVerticalAlignment = .fill
-        
-        Ue2NakaButton.imageView?.contentMode = .scaleAspectFit
-        Ue2NakaButton.contentHorizontalAlignment = .fill
-        Ue2NakaButton.contentVerticalAlignment = .fill
-        
-        Ue2MigiButton.imageView?.contentMode = .scaleAspectFit
-        Ue2MigiButton.contentHorizontalAlignment = .fill
-        Ue2MigiButton.contentVerticalAlignment = .fill
-        
-        Ue3HidariButton.imageView?.contentMode = .scaleAspectFit
-        Ue3HidariButton.contentHorizontalAlignment = .fill
-        Ue3HidariButton.contentVerticalAlignment = .fill
-        
-        Ue3NakaButton.imageView?.contentMode = .scaleAspectFit
-        Ue3NakaButton.contentHorizontalAlignment = .fill
-        Ue3NakaButton.contentVerticalAlignment = .fill
-        
-        Ue3MigiButton.imageView?.contentMode = .scaleAspectFit
-        Ue3MigiButton.contentHorizontalAlignment = .fill
-        Ue3MigiButton.contentVerticalAlignment = .fill
-        
-        Ue4HidariButton.imageView?.contentMode = .scaleAspectFit
-        Ue4HidariButton.contentHorizontalAlignment = .fill
-        Ue4HidariButton.contentVerticalAlignment = .fill
-        
-        Ue4NakaButton.imageView?.contentMode = .scaleAspectFit
-        Ue4NakaButton.contentHorizontalAlignment = .fill
-        Ue4NakaButton.contentVerticalAlignment = .fill
-        
-        Ue4MigiButton.imageView?.contentMode = .scaleAspectFit
-        Ue4MigiButton.contentHorizontalAlignment = .fill
-        Ue4MigiButton.contentVerticalAlignment = .fill
-        
-        
+        generateImageTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(generateUIIMageView), userInfo: nil, repeats: true)
+    }
     
-        navigationController?.setNavigationBarHidden(true, animated: false)
+    @objc func generateUIImageView() -> void {
         
-        count = 30
+        //画像の名前
+            let fishArray:[String] = ["katuo","squid","pufferfish"]
         
-        if !timer.isValid {
-            //タイマーが動作していなかったら動かす
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
+        //配列からランダムな名前を取り出す
+            let randomImageElement = fishArray.randomElement()!
+           
+        // UIImageの初期化
+            let image: UIImage = UIImage(named: fishArray.randomElement()!)!
+           
+        // 画像が押された時用に識別子を設定
+            image.accessibilityIdentifier = randomImageElement
+
+        //UIImageViewの初期化
+            let imageView = UIImageView(image: image)
+           
+        //画面の縦幅・横幅を取得
+            let viewWidth: CGFloat = view.frame.size.width
+            let viewHeight: CGFloat = view.frame.size.height
+           
+        //画面に設定したい縦・横幅を変数に格納
+            let imageWidth: CGFloat = 100
+            let imageHeight: CGFloat = 100
+           
+        //画像の座標・大きさを生成
+            let rect: CGRect = CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight)
+           
+        // 指定した座標・大きさを設定
+            imageView.frame = rect;
+        
+        // 画像を画面の中央を指定
+            imageView.center = CGPoint(x: CGFloat.random(in: 0...viewWidth), y: CGFloat.random(in: 0...viewHeight))
+
+        // viewにUIImageViewを追加
+            self.view.addSubview(imageView)
             
-        }
-        
-        //『結果へ』ボタンを非表示にする
-        button.isHidden = true
-    }
-    
-    @objc func up() {
-        //countを1引く
-        count = count - 1
-        
-        //countが0になったとき止まる
-        if count <= 0 {
-            print("タイマーが0になりました")
+        // ユーザーのタップなどを認識するように設定！
+            imageView.isUserInteractionEnabled = true
             
-            timer.invalidate()
-            //『結果へ』ボタンを表示する
-            button.isHidden = false
-        }
-        
-        print("ビスコのじかん") //ﾌﾊﾊﾊﾊﾊ ｺﾉ ﾌﾟﾛｼﾞｪｸﾄ ﾊ ﾜﾚ ｶﾞ ﾉｯﾄｯﾀ!! ｼﾝﾘｬｸｼｬ ｳﾁｭｳｼﾞﾝ　 ﾖﾘ
-        print(count)
-        buttonHyouji()
-        
-        label.text = String(count)
-        
+        // タップされたときに呼ばれる関数を登録
+            imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewTapped)))
+
     }
-    
-    @IBAction func tapActionUe1Hidari(_ sender: Any) {
-        number += 2
-        pointLabel.text = String(number) //点数の合計を表示させる
-        BashoTolabelToFont()
-        Ue1HidariButton.isHidden = true
-       }
-       
-    @IBAction func tapActionUe1Naka(_ sender: Any) {
-        number += 1
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue1NakaButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe1Migi(_ sender: Any) {
-        number += 1
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue1MigiButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe2Hidari(_ sender: Any) {
-        number -= 3
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue2HidariButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe2Naka(_ sender: Any) {
-        number -= 3
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue2NakaButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe2Migi(_ sender: Any) {
-        number += 1
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue2MigiButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe3Hidari(_ sender: Any) {
-        number += 2
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue3HidariButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe3Naka(_ sender: Any) {
-        number -= 3
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue3NakaButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe3Migi(_ sender: Any) {
-        number += 2
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue3MigiButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe4Hidari(_ sender: Any) {
-        number += 1
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue4HidariButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe4Naka(_ sender: Any) {
-        number -= 3
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue4NakaButton.isHidden = true
-    }
-    
-    @IBAction func tapActionUe4migi(_ sender: Any) {
-        number += 2
-        pointLabel.text = String(number)
-        BashoTolabelToFont()
-        Ue4MigiButton.isHidden = true
-        
-    }
-    
-    func BashoTolabelToFont() {
-        pointLabel.textColor = colorArray.randomElement() //ColorArrayからランダムに選びます
-        // pointLabel.font = UIFont(name: fontArray.randomElement()!, size: 56)
-        //fontArrayからサイズは56で統一にします
-        //pointLabel.adjustsFontSizeToFitWidth = true
-        
-    }
-    
-    @IBAction func start() {
-        
-        
-    }
-    
-    @IBAction func stop() {
-        
-        
-    }
-    
-    func buttonHyouji() {
-        ransu = Int.random(in: 0...11)
-        
-        if ransu == 0 {
-            //Ue1Hidariが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = false
-            Ue1HidariButton.isHidden = true
-            Ue1NakaButton.isHidden = true
-            Ue1MigiButton.isHidden = true
-            Ue2HidariButton.isHidden = true
-            Ue2NakaButton.isHidden = true
-            Ue2MigiButton.isHidden = true
-            Ue3HidariButton.isHidden = true
-            Ue3NakaButton.isHidden = true
-            Ue3MigiButton.isHidden = true
-            Ue4HidariButton.isHidden = true
-            Ue4NakaButton.isHidden = true
-            Ue4MigiButton.isHidden = true
-            
-        }
-        if ransu == 1 {
-            //Ue1Nakaが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-            Ue1HidariButton.isHidden = false
-            Ue1NakaButton.isHidden = true
-            Ue1MigiButton.isHidden = true
-            Ue2HidariButton.isHidden = true
-            Ue2NakaButton.isHidden = true
-            Ue2MigiButton.isHidden = true
-            Ue3HidariButton.isHidden = true
-            Ue3NakaButton.isHidden = true
-            Ue3MigiButton.isHidden = true
-            Ue4HidariButton.isHidden = true
-            Ue4NakaButton.isHidden = true
-            Ue4MigiButton.isHidden = true
-        }
-        if ransu == 2 {
-            //Ue1Migiが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-            Ue1NakaButton.isHidden = true
-            Ue1MigiButton.isHidden = false
-            Ue2HidariButton.isHidden = true
-            Ue2NakaButton.isHidden = true
-            Ue2MigiButton.isHidden = true
-            Ue3HidariButton.isHidden = true
-            Ue3NakaButton.isHidden = true
-            Ue3MigiButton.isHidden = true
-            Ue4HidariButton.isHidden = true
-            Ue4NakaButton.isHidden = true
-            Ue4MigiButton.isHidden = true
-        }
-        if ransu == 3 {
-            //Ue2Hidariが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-            Ue1NakaButton.isHidden = true
-            Ue1MigiButton.isHidden = true
-            Ue2HidariButton.isHidden = false
-            Ue2NakaButton.isHidden = true
-            Ue2MigiButton.isHidden = true
-            Ue3HidariButton.isHidden = true
-            Ue3NakaButton.isHidden = true
-            Ue3MigiButton.isHidden = true
-            Ue4HidariButton.isHidden = true
-            Ue4NakaButton.isHidden = true
-            Ue4MigiButton.isHidden = true
-        }
-        if ransu == 4 {
-            //Ue2Nakaが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = true
-             Ue2NakaButton.isHidden = false
-             Ue2MigiButton.isHidden = true
-             Ue3HidariButton.isHidden = true
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = true
-             Ue4HidariButton.isHidden = true
-             Ue4NakaButton.isHidden = true
-             Ue4MigiButton.isHidden = true
-        }
-        if ransu == 5 {
-            //Ue2Migiが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = true
-             Ue2NakaButton.isHidden = true
-             Ue2MigiButton.isHidden = false
-             Ue3HidariButton.isHidden = true
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = true
-             Ue4HidariButton.isHidden = true
-             Ue4NakaButton.isHidden = true
-             Ue4MigiButton.isHidden = true
-        }
-        if ransu == 6 {
-            //Ue3Hidariが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = true
-             Ue2NakaButton.isHidden = true
-             Ue2MigiButton.isHidden = true
-             Ue3HidariButton.isHidden = false
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = true
-             Ue4HidariButton.isHidden = true
-             Ue4NakaButton.isHidden = true
-             Ue4MigiButton.isHidden = true
-        }
-        if ransu == 7 {
-            //Ue3Nakaが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = false
-             Ue2NakaButton.isHidden = true
-             Ue2MigiButton.isHidden = true
-             Ue3HidariButton.isHidden = true
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = true
-             Ue4HidariButton.isHidden = true
-             Ue4NakaButton.isHidden = true
-             Ue4MigiButton.isHidden = true
-            
-        }
-        if ransu == 8 {
-            //Ue3Migiが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = true
-             Ue2NakaButton.isHidden = true
-             Ue2MigiButton.isHidden = true
-             Ue3HidariButton.isHidden = true
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = false
-             Ue4HidariButton.isHidden = true
-             Ue4NakaButton.isHidden = true
-             Ue4MigiButton.isHidden = true
-        }
-        if ransu == 9 {
-            //Ue4Hidariが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = true
-             Ue2NakaButton.isHidden = true
-             Ue2MigiButton.isHidden = true
-             Ue3HidariButton.isHidden = true
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = true
-             Ue4HidariButton.isHidden = false
-             Ue4NakaButton.isHidden = true
-             Ue4MigiButton.isHidden = true
-        }
-        if ransu == 10 {
-            //Ue4NAkaが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = true
-             Ue2NakaButton.isHidden = true
-             Ue2MigiButton.isHidden = true
-             Ue3HidariButton.isHidden = true
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = true
-             Ue4HidariButton.isHidden = true
-             Ue4NakaButton.isHidden = false
-             Ue4MigiButton.isHidden = true
-        }
-        if ransu == 11 {
-            //Ue4Migiが表示（他は非表示）
-            //乱数を入れるためのInt型の変数を用意
-            Ue1HidariButton.isHidden = true
-             Ue1NakaButton.isHidden = true
-             Ue1MigiButton.isHidden = true
-             Ue2HidariButton.isHidden = true
-             Ue2NakaButton.isHidden = true
-             Ue2MigiButton.isHidden = true
-             Ue3HidariButton.isHidden = true
-             Ue3NakaButton.isHidden = true
-             Ue3MigiButton.isHidden = true
-             Ue4HidariButton.isHidden = true
-             Ue4NakaButton.isHidden = true
-             Ue4MigiButton.isHidden = false
-        }
-    }
-    
-    //①セグエ実行前処理
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        //②セグエの識別子確認
-        if segue.identifier == "toResult" {
-            
-            //③遷移先ViewControllerの取得
-            let nextView = segue.destination as! ResultViewController
-            
-            //④値の設定
-            nextView.saishusukoa = number
-            
-        }
-    }
-    
 }
+
+

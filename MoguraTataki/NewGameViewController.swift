@@ -76,6 +76,7 @@ class NewGameViewController: UIViewController {
     
     // ボタンが押されたときの処理
         @objc func imageViewTapped(sender: UITapGestureRecognizer) {
+            
             // タップ元を取得&識別子を取得
             let view = sender.view as! UIImageView
             let identifier = view.image?.accessibilityIdentifier!

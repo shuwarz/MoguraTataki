@@ -32,7 +32,7 @@ class NewGameViewController: UIViewController {
         let randomImageElement = fishArray.randomElement()!
     
     // UIImageの初期化
-        let image: UIImage = UIImage(named: fishArray.randomElement()!)!
+        let image: UIImage = UIImage(named: randomImageElement)!
     
     // 画像が押された時用に識別子を設定
         image.accessibilityIdentifier = randomImageElement

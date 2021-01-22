@@ -11,10 +11,15 @@ import UIKit
 class GameViewController: UIViewController {
     
     @IBOutlet var button: UIButton!
-        
+    
+    @IBOutlet var timelimitLabal: UILabel!
+    
+    @IBOutlet var scoreLabel: UILabel!
+    
     var generateImageTimer = Timer()
     
-    var number: Int = 0
+    var score: Int = 0
+    var timelimit: Int = 30
     @IBOutlet var label: UILabel!
     
     override func viewDidLoad() {
@@ -25,10 +30,20 @@ class GameViewController: UIViewController {
         generateImageTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(generateUIImageView), userInfo: nil, repeats: true)
         
         //『結果へ』ボタンを非表示にする
-                button.isHidden = true
+        button.isHidden = true
     }
     
     @objc func generateUIImageView() {
+        timelimit = timelimit - 1
+        timelimitLabal.text = String(timelimit)
+        //countが0になったとき止まる
+        if timelimit <= 0 {
+            print("タイマーが0になりました")
+            
+            generateImageTimer.invalidate()
+            //『結果へ』ボタンを表示する
+            button.isHidden = false
+        }
         
         //画像の名前
         let fishArray:[String] = ["katuo","squid","pufferFish"]
@@ -88,15 +103,23 @@ class GameViewController: UIViewController {
         // 上で設定した識別子に合わせてコンソールに出力する文字列を変えるSwitch文！
         switch identifier {
         case "katuo":
-            // count = count + 5
+            score = score + 3
+            scoreLabel.text = String(score)
             print("カツオ")
-        case "squid":
-            print("イカ")
         case "pufferFish":
+            score = score + 2
+            scoreLabel.text = String(score)
             print("フグ")
+        case "squid":
+            score = score - 5
+            scoreLabel.text = String(score)
+            print("イカ")
         default:
             print("???")
-        
+            
         }
+        
     }
 }
+
+

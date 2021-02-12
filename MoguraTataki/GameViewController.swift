@@ -12,6 +12,8 @@ class GameViewController: UIViewController {
     
     @IBOutlet var button: UIButton!
     
+    @IBOutlet var background: UIImageView!
+    
     @IBOutlet var timelimitLabal: UILabel!
     
     @IBOutlet var scoreLabel: UILabel!
@@ -45,6 +47,8 @@ class GameViewController: UIViewController {
             button.isHidden = false
         }
         
+        background.isUserInteractionEnabled = true
+        
         //画像の名前
         let fishArray:[String] = ["katuo","squid","pufferFish"]
         //配列からランダムな名前を取り出す
@@ -60,8 +64,8 @@ class GameViewController: UIViewController {
         let imageView = UIImageView(image: image)
         
         //画面の縦幅・横幅を取得
-        let viewWidth: CGFloat = view.frame.size.width
-        let viewHeight: CGFloat = view.frame.size.height
+        let viewWidth: CGFloat = background.frame.size.width
+        let viewHeight: CGFloat = background.frame.size.height
         
         //画面に設定したい縦・横幅を変数に格納
         let imageWidth: CGFloat = 100
@@ -76,7 +80,7 @@ class GameViewController: UIViewController {
         // 画像を画面の中央を指定
         imageView.center = CGPoint(x: CGFloat.random(in: 0...viewWidth), y: CGFloat.random(in: 0...viewHeight))
         // viewにUIImageViewを追加
-        self.view.addSubview(imageView)
+        self.background.addSubview(imageView)
         
         // ユーザーのタップなどを認識するように設定！
         imageView.isUserInteractionEnabled = true
@@ -118,6 +122,20 @@ class GameViewController: UIViewController {
             print("???")
             
         }
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+                //②セグエの識別子確認
+                if segue.identifier == "toResult" {
+                    
+                    //③遷移先ViewControllerの取得
+                    let nextView = segue.destination as! ResultViewController
+                    
+                    //④値の設定
+                    nextView.saishusukoa = score
+                    
+                }
+            }
         
     }
 }

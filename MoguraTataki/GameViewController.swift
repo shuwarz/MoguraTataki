@@ -123,21 +123,22 @@ class GameViewController: UIViewController {
             
         }
         
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                
-                //②セグエの識別子確認
-                if segue.identifier == "toResult" {
-                    
-                    //③遷移先ViewControllerの取得
-                    let nextView = segue.destination as! ResultViewController
-                    
-                    //④値の設定
-                    nextView.saishusukoa = score
-                    
-                }
-            }
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            //②セグエの識別子確認
+            if segue.identifier == "toResult" {
+                
+                //③遷移先ViewControllerの取得
+                let nextView = segue.destination as! ResultViewController
+                
+                //④値の設定
+                nextView.saishusukoa = score
+                
+            }
+        }
+    
 }
 
 

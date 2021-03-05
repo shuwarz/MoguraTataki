@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mermaid" translatesAutoresizingMaskIntoConstraints="NO" id="RQR-XA-qP5">
-                                <rect key="frame" x="-38" y="94.666666666666686" width="490" height="547"/>
+                                <rect key="frame" x="-38" y="94.666666666666686" width="490" height="537"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -129,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ポイント" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-ak-4ux">
-                                <rect key="frame" x="326.66666666666674" y="42" width="67.333333333333314" height="17"/>
+                                <rect key="frame" x="326.66666666666669" y="42" width="67.333333333333314" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -226,8 +226,8 @@
                                 <color key="textColor" red="0.0" green="0.0078757824380000004" blue="0.0079334368930000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm8-pa-3bs">
-                                <rect key="frame" x="72" y="563" width="270" height="78"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm8-pa-3bs">
+                                <rect key="frame" x="72" y="563" width="270" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="YzC-ch-TPY"/>
                                 </constraints>
@@ -272,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydw-PI-tGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595.6521739130435" y="28.794642857142854"/>
+            <point key="canvasLocation" x="1595.6521739130435" y="28.532608695652176"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uk3-GI-8rN">

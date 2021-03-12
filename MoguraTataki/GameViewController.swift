@@ -17,7 +17,11 @@ class GameViewController: UIViewController {
     @IBOutlet var timelimitLabal: UILabel!
     
     @IBOutlet var scoreLabel: UILabel!
-    
+	
+	@IBOutlet weak var pauseButton: UIButton!
+	@IBOutlet weak var pauseLabel: UILabel!
+	var isPaused: Bool = false
+	
     var generateImageTimer = Timer()
     
     var score: Int = 0
@@ -33,6 +37,8 @@ class GameViewController: UIViewController {
         
         //『結果へ』ボタンを非表示にする
         button.isHidden = true
+		pauseLabel.isHidden = true
+		pauseButton.tintColor = .black
     }
     
     @objc func generateUIImageView() {
@@ -45,6 +51,7 @@ class GameViewController: UIViewController {
             generateImageTimer.invalidate()
             //『結果へ』ボタンを表示する
             button.isHidden = false
+			pauseButton.isEnabled = false
         }
         
         background.isUserInteractionEnabled = true
@@ -124,6 +131,20 @@ class GameViewController: UIViewController {
         }
         
     }
+	
+	@IBAction func toggleTimer() {
+		isPaused = !isPaused
+		if isPaused {
+			pauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+			generateImageTimer.invalidate()
+			pauseLabel.isHidden = false
+		} else {
+			pauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+			generateImageTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(generateUIImageView), userInfo: nil, repeats: true)
+			pauseLabel.isHidden = true
+		}
+		
+	}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             
@@ -138,6 +159,7 @@ class GameViewController: UIViewController {
                 
             }
         }
+
     
 }
 

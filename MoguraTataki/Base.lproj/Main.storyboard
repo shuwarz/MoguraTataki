@@ -136,6 +136,22 @@
                                 <color key="textColor" red="0.0" green="0.0078757824380000004" blue="0.0079334368930000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w18-Db-fUT">
+                                <rect key="frame" x="20" y="79" width="47" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="pause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="toggleTimer" destination="WAu-4v-Z4Z" eventType="touchUpInside" id="POl-Ym-6XE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一時停止中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4W-6X-UyM">
+                                <rect key="frame" x="117" y="350" width="180" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P00-5I-6MU"/>
                         <color key="backgroundColor" red="0.94042438269999995" green="0.9647861123" blue="0.96894425149999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -167,6 +183,8 @@
                     <connections>
                         <outlet property="background" destination="j2t-Ux-kgH" id="kha-BN-I98"/>
                         <outlet property="button" destination="cqX-1a-zA2" id="lh8-6q-JEI"/>
+                        <outlet property="pauseButton" destination="w18-Db-fUT" id="oWb-bf-soe"/>
+                        <outlet property="pauseLabel" destination="H4W-6X-UyM" id="cEQ-b2-LtD"/>
                         <outlet property="scoreLabel" destination="VBh-5N-dQm" id="PJO-dl-OnQ"/>
                         <outlet property="timelimitLabal" destination="Kbj-rl-4D2" id="1OW-im-5c4"/>
                     </connections>
@@ -419,6 +437,7 @@
     <resources>
         <image name="katuoBackGround" width="2452" height="3729"/>
         <image name="mermaid" width="490" height="766"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
